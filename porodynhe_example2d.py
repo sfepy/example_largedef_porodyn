@@ -1,5 +1,22 @@
+# Rohan E., Lukeš V.
+# Modeling large-deforming fluid-saturated porous media using
+# an Eulerian incremental formulation.
+# Advances in Engineering Software, 113:84-95, 2017,
+# https://doi.org/10.1016/j.advengsoft.2016.11.003
+#
+# Run simulation:
+#
+#   ./simple.py example_largedef_porodyn-1/porodynhe_example2d.py
+#
+# The results are stored in `example_largedef_porodyn-1/results`.
+#
+
 import numpy as nm
-from porodyn_engine import incremental_algorithm, fc_fce, mat_fce, def_problem
+from porodyn_engine import incremental_algorithm,\
+    fc_fce, mat_fce, def_problem
+import os.path as osp
+
+wdir = osp.dirname(__file__)
 
 
 def define():
@@ -55,7 +72,7 @@ def define():
     ###############################################
 
     options = {
-        'output_dir': 'output',
+        'output_dir': osp.join(wdir, 'results'),
         'parametric_hook': 'incremental_algorithm',
     }
 
