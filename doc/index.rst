@@ -9,7 +9,7 @@ Numerical simulations of large-deforming fluid-saturated porous media using an E
 Running simulation
 ------------------
 
-To run the multiscale numerical simulation, download the
+To run the numerical simulation, download the
 `archive <https://github.com/sfepy/example_largedef_porodyn/archive/v1.zip>`_,
 unpack it in the main SfePy (see [CimrmanLukesRohan2019]_) directory and type:
 
